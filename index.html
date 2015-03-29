@@ -12,41 +12,49 @@
 		<h1 class="header--title">Author Quiz</h1>
 	</header>
 	<section class="quiz">
-		<div class="quiz--qa">
-			<h2 class="quiz--question">Author of The Telltale Heart, The Raven and The Fall of the House of Usher.</h2>
+		<div class="quiz--instructions" id="quiz--instructions">
+			<div class="quiz--instructions-text">
+				<h2 class="quiz--question">Instructions</h2>
+				<p>In this quiz you'll be asked to identify famous authors by some of thier works.</p>
+				<button class="quiz--start-btn" id="start-btn" onclick="clickStart()">Start</button>
+			</div>
+		</div>
+		<div class="quiz--qa" id="quiz--qa">
+			<h2 class="quiz--question" id="quiz--question">Author of The Telltale Heart, The Raven and The Fall of the House of Usher.</h2>
 			<div class="quiz--answers">
 				<div class="quiz--answer-choice">
 					<input type="radio" name="answer-choice" id="answer-1">
-					<label for="answer-1"><span></span>&emsp;H.P. Lovecraft</label>
+					<label for="answer-1" id="answer-label-1"></label>
 				</div><br>
 				<div class="quiz--answer-choice">
 					<input type="radio" name="answer-choice" id="answer-2">
-					<label for="answer-2"><span></span>&emsp;Arthur Machen</label>
+					<label for="answer-2" id="answer-label-2"></label>
 				</div><br>
 				<div class="quiz--answer-choice">
 					<input type="radio" name="answer-choice" id="answer-3">
-					<label for="answer-3"><span></span>&emsp;Ambrose Bierce</label>
+					<label for="answer-3" id="answer-label-3"></label>
 				</div><br>
 				<div class="quiz--answer-choice">
 					<input type="radio" name="answer-choice" id="answer-4">
-					<label for="answer-4"><span></span>&emsp;Edgar Allan Poe</label>
+					<label for="answer-4" id="answer-label-4"></label>
 				</div><br>
 			</div>
-			<button class="quiz--confirm-btn">Confirm Answer</button>
-			<button class="quiz--next-btn">Next Question</button>
+			<button class="quiz--confirm-btn" id="quiz--confirm-btn" onclick="clickConfirm()">Confirm Answer</button>
+			<button class="quiz--next-btn" id="quiz--next-btn" onclick="clickNext()">Next Question</button>
 		</div>
-		<div class="quiz--score">
+		<div class="quiz--score" id="quiz--score">
 			<div class="quiz--score-text">
 				<h1 class="quiz--end">Well Done!</h1>
-				<p>You scored:</p>
-				<h2 class="quiz--score-display"><span class="green-text">10</span>/10 Correct</h2>
+				<p>You answered:</p>
+				<h2 class="quiz--score-display"><span id="player-score"></span>/<span id="total-score"></span> Correct</h2>
+				<button class="quiz--start-btn" id="restart-btn" onclick="clickRestart()">Restart</button>
 			</div>
 		</div>
 	</section>
 	<footer class="footer">
 		<p class="footer--copy">&copy; 2015 Eric Poole</p>
 	</footer>
-	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/ui.js"></script>
 </body>
 </html>

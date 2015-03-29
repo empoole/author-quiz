@@ -39,7 +39,8 @@ html {
 }
 
 .quiz--qa,
-.quiz--score {
+.quiz--score,
+.quiz--instructions {
   color: #403E3A;
   background-color: #FFF8E7;
   padding: 2rem;
@@ -48,8 +49,6 @@ html {
   height: 25rem;
   box-shadow: 1px 1px 1px 1px black;
 }
-
-
 
 .quiz--question {
   font-family: 'Lora', 'Times New Roman', Times, serif; 
@@ -67,7 +66,6 @@ html {
 }
 
 /*CSS radio buttons from http://codepen.io/mitchmc/pen/pebIx*/
-
 .quiz--answer-choice input[type="radio"] {
   display: none;
 }
@@ -92,11 +90,16 @@ html {
 }
 
 .quiz--confirm-btn,
-.quiz--next-btn {
+.quiz--next-btn,
+.quiz--start-btn {
   font-family: 'Lora', 'Times New Roman', Times, serif;
   color: #FFF8E7;
   border: none;
   padding: 8px 12px;
+}
+
+.quiz--confirm-btn,
+.quiz--next-btn {
   float: right;
 }
 
@@ -109,13 +112,26 @@ html {
   display: none;
 }
 
-.quiz--score {
+.quiz--start-btn {
+  background-color: #5AB260;
+  font-size: 1.25rem;
+  padding: 15px 20px;
+  margin-top: 20px;
+}
+
+.quiz--score,
+.quiz--qa {
   display: none;
 }
 
-.quiz--score-text {
+.quiz--score-text,
+.quiz--instructions {
   text-align: center;
-  margin: 8rem;
+}
+
+.quiz--score-text,
+.quiz--instructions-text {
+  margin: 6rem;
 }
 
 /*Answer States*/
