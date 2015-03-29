@@ -29,10 +29,12 @@ function clickNext() {
 		hide(document.getElementById('quiz--next-btn'));
 		show(document.getElementById('quiz--confirm-btn'));
 	}
+
+	clearAnswers();
 }
 
 function clickConfirm() {
-	checkAnswer();
+	checkAnswer(quiz[questionCount]);
 	hide(document.getElementById('quiz--confirm-btn'));
 	show(document.getElementById('quiz--next-btn'));
 }

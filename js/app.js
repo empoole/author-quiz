@@ -35,8 +35,39 @@ function show(element) {
 	element.style.display = 'block';
 }
 
-function checkAnswer() {
-	//todo
+function disableAnswers() {
+	var answers = document.getElementsByName('answer-choice');
+	for (var i = 0; i < answers.length;  i++){
+    	answers[i].disabled = true;
+	}
+}
+
+function clearAnswers() {
+	var answers = document.getElementsByName('answer-choice');
+	for (var i = 0; i < answers.length;  i++){
+    	answers[i].disabled = false;
+    	answers[i].value = 'off';
+	}
+}
+
+function checkAnswer(q) {
+	var answers = document.getElementsByName('answer-choice'),
+		playerAnswer = "";
+
+	for (var i = 0; i < answers.length; i++) {
+		if(answers[i].checked) {
+			var selector = 'label[for=' + answers[i].id + ']',
+				label = document.querySelector(selector),
+				text = label.innerHTML;
+			playerAnswer = text.replace(/<\/?span[^>]*>/g,"").trim();
+		}
+	}
+
+	if (playerAnswer === q.answers[q.correctAnswer]) {
+		playerScore++;
+	}
+	disableAnswers();
+
 }
 
 function totalScore() {
