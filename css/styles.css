@@ -1,0 +1,140 @@
+/*
+  White: #FFF8E7
+  Black: #403E3A
+  Blue: #7E8DB2
+  Green: #5AB260
+  Red: #D53D37
+  Yellow: #CFB440
+*/
+
+html {
+  font-family: 'Slabo 27px', Garamond, serif;
+  background-color: #403E3A;
+}
+
+.header,
+.quiz,
+.footer {
+  width: 80%;
+  margin: auto;
+}
+
+.header,
+.footer {
+  text-align: center;
+  padding-top: 5rem;
+  color: #FFF8E7;
+}
+
+.header--title {
+  font-family: 'Lora', 'Times New Roman', Times, serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 2.75rem;
+  text-shadow: 1px 1px #000000;
+}
+
+.footer--copy {
+  font-size: .8rem;
+}
+
+.quiz--qa,
+.quiz--score {
+  color: #403E3A;
+  background-color: #FFF8E7;
+  padding: 2rem;
+  width: 70%;
+  margin: auto;
+  height: 25rem;
+  box-shadow: 1px 1px 1px 1px black;
+}
+
+
+
+.quiz--question {
+  font-family: 'Lora', 'Times New Roman', Times, serif; 
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.quiz--answers {
+  padding: 2rem 0;
+}
+
+.quiz--answer-choice {
+  padding: 10px;
+  border: 1px solid black; 
+}
+
+/*CSS radio buttons from http://codepen.io/mitchmc/pen/pebIx*/
+
+.quiz--answer-choice input[type="radio"] {
+  display: none;
+}
+
+.quiz--answer-choice input[type="radio"] + label span {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  cursor:pointer;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.quiz--answer-choice input[type="radio"] + label span {
+  background-color: #403E3A;
+}
+
+.quiz--answer-choice input[type="radio"]:checked + label span{
+  background-color: #5AB260;
+}
+
+.quiz--confirm-btn,
+.quiz--next-btn {
+  font-family: 'Lora', 'Times New Roman', Times, serif;
+  color: #FFF8E7;
+  border: none;
+  padding: 8px 12px;
+  float: right;
+}
+
+.quiz--confirm-btn {
+  background-color: #7E8DB2;
+}
+
+.quiz--next-btn {
+  background-color: #5AB260;
+  display: none;
+}
+
+.quiz--score {
+  display: none;
+}
+
+.quiz--score-text {
+  text-align: center;
+  margin: 8rem;
+}
+
+/*Answer States*/
+.correct {
+  background-color: #5AB260;
+}
+
+.incorrect {
+  background-color: #D53D37;
+}
+
+.green-text {
+  color: #5AB260;
+}
+
+.yellow-text {
+  color: #CFB440;
+}
+
+.red-text {
+  color: #D53D37;
+}
