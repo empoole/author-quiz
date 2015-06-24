@@ -7,7 +7,8 @@ function clickStart() {
 
 function clickNext() {
 	var totalScoreSpan = document.getElementById('total-score'),
-		playerScoreSpan = document.getElementById('player-score');
+		playerScoreSpan = document.getElementById('player-score'),
+		showAnswer = document.getElementById('quiz--correct');
 
 	if(questionCount >= 4) {
 		hide(document.getElementById('quiz--qa'));
@@ -25,18 +26,26 @@ function clickNext() {
 	} else {
 		questionCount++;
 		displayQuestion(quiz[questionCount]);
-		//displayQuestionNumber(questionCount);
 		hide(document.getElementById('quiz--next-btn'));
 		show(document.getElementById('quiz--confirm-btn'));
 	}
-
+	hide(showAnswer);
 	clearAnswers();
 }
 
 function clickConfirm() {
-	checkAnswer(quiz[questionCount]);
+	var correct = checkAnswer(quiz[questionCount]);
 	hide(document.getElementById('quiz--confirm-btn'));
 	show(document.getElementById('quiz--next-btn'));
+	var showAnswer = document.getElementById('quiz--correct');
+	if (correct) {
+		showAnswer.className = 'correct';
+		showAnswer.innerHTML = "Correct!";
+	} else {
+		showAnswer.className = 'incorrect';
+		showAnswer.innerHTML = "Incorrect.";
+	}
+	show(showAnswer);
 }
 
 function clickRestart() {

@@ -23,10 +23,6 @@ function displayQuestion(q) {
 	}
 }
 
-// function displayQuestionNumber() {
-
-// }
-
 function hide(element) {
 	element.style.display = 'none';
 }
@@ -65,8 +61,10 @@ function checkAnswer(q) {
 
 	if (playerAnswer === q.answers[q.correctAnswer]) {
 		playerScore++;
+		disableAnswers();
 	}
-	disableAnswers();
+
+	return playerAnswer === q.answers[q.correctAnswer];
 
 }
 

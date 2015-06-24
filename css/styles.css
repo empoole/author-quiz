@@ -154,3 +154,9 @@ html {
 .red-text {
   color: #D53D37;
 }
+
+#quiz--correct {
+  margin: 0;
+  float: right;
+  padding: 2px;
+}
